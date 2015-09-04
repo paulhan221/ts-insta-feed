@@ -29,6 +29,8 @@ gem "instagram"
 
 gem 'pry'
 
+gem 'httparty', '~> 0.13.5'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,1 +1,24 @@
-sup man
+<div class="instagram-container">
+  <% @results.each do |result| %>
+
+
+    <div class="row instagram-post">
+      <div class="col-md-8">
+          <%=image_tag(result["images"]["standard_resolution"]["url"], :class => 'image') %>
+      </div>
+
+      <div class="col-md-4">
+        <div class="post">
+          <a href="http://instagram.com/<%=result['user']['username']%>"><%= image_tag(result['user']['profile_picture'], :class => 'profile-pic')%></a>
+          <a href="http://instagram.com/<%=result['user']['username']%>"><p class="username"><%= result['user']['username'] %></p></a>
+        </div>
+        caption = <%= result['caption']['text'] %>
+        likes = <%= result['likes']['count'] %>
+        link to post = <%= result['link'] %>
+        comments count = <%= result['comments']['count'] %>
+      </div>
+    </div>
+
+
+  <% end %>
+</div>

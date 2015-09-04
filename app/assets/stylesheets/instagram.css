@@ -1,0 +1,30 @@
+.instagram-container {
+  margin: 36px 24px 24px 36px;
+}
+
+.image {
+  width: 80%;
+  border: 20px solid black;
+  border-radius: 10px;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.post {
+  border: 10px solid black;
+  border-radius: 10px;
+}
+
+.instagram-post {
+  margin: 24px 12px 24px 12px;
+}
+
+.profile-pic {
+  border-radius: 50px;
+  width: 30%;
+}
+
+.username {
+  font-size: 16px;
+  color: #5283A4;
+}

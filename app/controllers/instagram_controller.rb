@@ -1,5 +1,7 @@
+require 'pry'
+
 class InstagramController < ApplicationController
-  require 'pry'
+
   def connect
     redirect_to Instagram.authorize_url(:redirect_uri => CALLBACK_URL)
   end
@@ -11,9 +13,10 @@ class InstagramController < ApplicationController
   end
 
   def feed
-    client = Instagram.client(:access_token => session[:access_token])
-    binding.pry
+    access_token = session[:access_token]
+    response = HTTParty.get("https://api.instagram.com/v1/tags/timessquare/media/recent?access_token=" + access_token)
+    @results = response['data']
     render 'feed.html.erb'
-end
+  end
 
 end
