@@ -1,5 +1,9 @@
+.pic-container{
+
+}
+
 .image {
-  width: 80%;
+  width: 90%;
   border: 20px solid black;
   border-radius: 10px;
   margin-right: 12px;
@@ -11,10 +15,11 @@
   background-color: white;
   border-radius: 10px;
   padding: 24px;
+  opacity: 2;
 }
 
 .instagram-post {
-  margin: 24px 12px 24px 12px;
+  margin: 24px 12px 36px 12px;
 }
 
 .profile-pic {
