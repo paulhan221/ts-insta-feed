@@ -1,24 +1,22 @@
-<div class="instagram-container">
-  <% @results.each do |result| %>
+<% @results.each do |result| %>
 
 
-    <div class="row instagram-post">
-      <div class="col-md-8">
-          <%=image_tag(result["images"]["standard_resolution"]["url"], :class => 'image') %>
-      </div>
-
-      <div class="col-md-4">
-        <div class="post">
-          <a href="http://instagram.com/<%=result['user']['username']%>"><%= image_tag(result['user']['profile_picture'], :class => 'profile-pic')%></a>
-          <a href="http://instagram.com/<%=result['user']['username']%>"><p class="username"><%= result['user']['username'] %></p></a>
-        </div>
-        caption = <%= result['caption']['text'] %>
-        likes = <%= result['likes']['count'] %>
-        link to post = <%= result['link'] %>
-        comments count = <%= result['comments']['count'] %>
-      </div>
+  <div class="row instagram-post">
+    <div class="eight columns">
+        <a href= <%=result['link'] %>><%=image_tag(result["images"]["standard_resolution"]["url"], :class => 'image') %></a>
     </div>
 
+    <div class="four columns">
+      <div class="post">
+        <a href="http://instagram.com/<%=result['user']['username']%>"><%= image_tag(result['user']['profile_picture'], :class => 'profile-pic')%></a>
+        <a href="http://instagram.com/<%=result['user']['username']%>"><p class="username"><%= result['user']['username'] %></p></a>
+        <p> <%= result['caption']['text'] %></p>
+        <p> Likes: <%= result['likes']['count'] %></p>
+        <p> Comments: <%= result['comments']['count'] %></p>
+      </div>
 
-  <% end %>
-</div>
+    </div>
+  </div>
+
+
+<% end %>
