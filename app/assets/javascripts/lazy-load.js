@@ -1,10 +1,10 @@
 document.addEventListener('scroll', function (event) {
-  var bottomTenPercent = (document.body.scrollHeight - window.innerHeight) * .9;
-  if (window.scrollY >= bottomTenPercent) {
+  var bottomFivePercent = (document.body.scrollHeight - window.innerHeight) * .95;
+  if (window.scrollY >= bottomFivePercent) {
     lazyLoad()
   }
 });
 
 function lazyLoad() {
-  console.log('waka');
+  $('.instagram-container').append("<h1>waka</h1>");
 }
