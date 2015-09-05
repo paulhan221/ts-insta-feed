@@ -22,7 +22,7 @@ class InstagramController < ApplicationController
   def pictures
     access_token = session[:access_token]
     next_tag_id = params[:tag_id]
-    response = HTTParty.get("https://api.instagram.com/v1/tags/timessquare/media/recent?access_token=" + access_token + "&next_max_tag_id=" + next_tag_id + "&count=5")
+    response = HTTParty.get("https://api.instagram.com/v1/tags/timessquare/media/recent?access_token=" + access_token + "&max_tag_id=" + next_tag_id + "&count=5")
     @results = response
     respond_to do |format|
       format.js {}
