@@ -15,6 +15,7 @@ class InstagramController < ApplicationController
   def feed
     access_token = session[:access_token]
     response = HTTParty.get("https://api.instagram.com/v1/tags/timessquare/media/recent?access_token=" + access_token)
+    binding.pry
     @results = response['data']
     render 'feed.html.erb'
   end
