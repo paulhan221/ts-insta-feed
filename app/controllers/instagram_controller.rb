@@ -14,7 +14,7 @@ class InstagramController < ApplicationController
 
   def feed
     access_token = session[:access_token]
-    response = HTTParty.get("https://api.instagram.com/v1/tags/timessquare/media/recent?access_token=" + access_token + "&count=3")
+    response = HTTParty.get("https://api.instagram.com/v1/tags/timessquare/media/recent?access_token=" + access_token + "&count=10")
     @results = response
     render 'feed.html.erb'
   end
@@ -22,7 +22,7 @@ class InstagramController < ApplicationController
   def pictures
     access_token = session[:access_token]
     next_tag_id = params[:tag_id]
-    response = HTTParty.get("https://api.instagram.com/v1/tags/timessquare/media/recent?access_token=" + access_token + "&max_tag_id=" + next_tag_id + "&count=1")
+    response = HTTParty.get("https://api.instagram.com/v1/tags/timessquare/media/recent?access_token=" + access_token + "&max_tag_id=" + next_tag_id + "&count=10")
     @results = response
     respond_to do |format|
       format.js {}
