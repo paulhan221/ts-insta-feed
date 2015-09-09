@@ -15,8 +15,9 @@
         </div>
       </div>
     <% end %>
-
-
-
     <%= link_to "dafda", "/pictures/#{@results['pagination']['next_max_tag_id']}", remote: true, class: 'fetch-pictures' %>
   </div>
+
+<script>
+  fetching = false;
+</script>
