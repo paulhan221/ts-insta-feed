@@ -1,6 +1,6 @@
 require "instagram"
 
-CALLBACK_URL = "http://localhost:3000/oauth/callback"
+CALLBACK_URL = "http://timessquare-insta-feed.herokuapp.com/oauth/callback"
 
 Instagram.configure do |config|
   config.client_id = ENV['CLIENT_ID']
