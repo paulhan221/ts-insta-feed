@@ -17,3 +17,11 @@
 p {
   word-wrap: break-word;
 }
+
+body {
+  background-color: #BEC3CD;
+}
+
+h1 {
+  font-family: sans-serif;
+}
