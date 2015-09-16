@@ -1,4 +1,4 @@
-.image {
+/*.image {
   width: 90%;
   border: 20px solid black;
   border-radius: 10px;
@@ -17,13 +17,31 @@
 .instagram-post {
   margin: 24px 12px 36px 12px;
 }
+*/
 
 .profile-pic {
   border-radius: 50px;
   width: 30%;
 }
 
+/*
 .username {
   font-size: 16px;
   color: #5283A4;
+}*/
+
+.thumbnail-pic {
+  width: 90%;
+}
+
+.thumbnail {
+  width: 30%;
+  border: 10px solid black;
+  height: auto;
+  margin-top: 1%;
+  background-color: white;
+}
+
+.instagram-container {
+
 }

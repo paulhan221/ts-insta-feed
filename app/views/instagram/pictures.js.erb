@@ -1,4 +1,20 @@
 console.log('hi');
 
-$("<%= escape_javascript(render 'instagram') %>").appendTo(".instagram-container");
+$("<%= escape_javascript(render 'ajaxthumbnail') %>").appendTo(".instagram-container");
+
+var $container = $('.instagram-container');
+
+$container.masonry('reloadItems');
+
+$(function(){
+  $container.imagesLoaded(function(){
+    $container.masonry({
+      itemSelector : '.thumbnail',
+      columnWidth: 20,
+      isAnimated: true
+    });
+  });
+});
+
+console.log('loaded');
 
